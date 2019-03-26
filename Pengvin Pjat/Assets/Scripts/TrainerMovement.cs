@@ -34,15 +34,19 @@ public class TrainerMovement : MonoBehaviour
 
 
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
-        if (patrolTime > 0 || patrolTime <= 10)
+        if (patrolTime > 0 && patrolTime < 11)
         {
             rb2d.AddForce(movementRight);
         }
-        if (patrolTime >= 10)
+
+        if (patrolTime >= 11 && patrolTime < 22)
         {
             rb2d.AddForce(movementLeft);
+        }
+
+        if (patrolTime >= 22)
+        {
             patrolTime = 0;
         }
-        
     }
 }
