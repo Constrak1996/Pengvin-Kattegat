@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class TrainerMovement : MonoBehaviour
 {
-    public float speed;             //Floating point variable to store the player's movement speed.
     private bool Right;
     private bool Left;
-    public float patrolTime;
+    private float patrolTime;
 
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
 
