@@ -3,29 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
      
-public class UI : MonoBehaviour
+public class Health : MonoBehaviour
 {
     // Field and property for the players health
     private int health;
-    public int Health { get => health; set => health = value; }
+    public int HealthPoints { get => health; set => health = value; }
 
-    //Field and property for the score
-    private int score;
-    public int Score { get => score; set => score = value; }
-
-    Text scoreText;
     Text healthText;
 
     /// <summary>
-    /// 
+    /// Function called when program is launched
     /// </summary>
     void Awake()
     {
-        scoreText = GetComponent<Text>();
         healthText = GetComponent<Text>();
-
-        Score = 0;
-        Health = 3;
+        health = 3;
     }
 
     /// <summary>
@@ -35,16 +27,15 @@ public class UI : MonoBehaviour
     {
 
     }
+
     /// <summary>
     /// Update is called once per frame
     /// </summary>
     void Update()
     {
-        scoreText.text = "Score:" + Score;
-        healthText.text = "Hp left:" + Health;        
-
-
-        if(Health <= 0)
+        healthText.text = "Hp left:" + health;        
+        
+        if(HealthPoints <= 0)
         {
             
         }
