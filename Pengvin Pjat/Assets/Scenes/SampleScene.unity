@@ -470,11 +470,6 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703766289}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b997fb6761a3e04badbeaa7ead89f6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -493,6 +488,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1703766295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703766289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2488b3730f11bc45a664d2fc09e6f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishCounter: 0
 --- !u!1 &2059929794
 GameObject:
   m_ObjectHideFlags: 0
