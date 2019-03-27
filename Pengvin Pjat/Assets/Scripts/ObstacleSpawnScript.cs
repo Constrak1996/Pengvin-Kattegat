@@ -34,11 +34,11 @@ public class ObstacleSpawnScript : MonoBehaviour
         if (Time.time > nextSpawn)
         {
             nextSpawn = Time.time + spawnRate;
-            rndY = Random.Range(-6.5f, 1.5f);
+            rndY = Random.Range(-7f, 1.3f);
             whereToSpawn = new Vector2(transform.position.x, rndY);
             
             GameObject gameObject = Instantiate(obstacle, whereToSpawn, Quaternion.identity);
-
+            GameObject gameObject2 = Instantiate(obstacle, whereToSpawn, Quaternion.identity);
             spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
             spriteType = Random.Range(0, 5);
             spriteRenderer.sprite = obstacles[spriteType];
