@@ -16,12 +16,16 @@ public class ObstacleSpawnScript : MonoBehaviour
 
     private float nextSpawn = 0.0f;
 
-    public Texture2D[] obstacles = new Texture2D[5];
+    private int spriteType;
+
+    private SpriteRenderer spriteRenderer;
+
+    public Sprite[] obstacles = new Sprite[5];
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -32,7 +36,12 @@ public class ObstacleSpawnScript : MonoBehaviour
             nextSpawn = Time.time + spawnRate;
             rndY = Random.Range(-6.5f, 1.5f);
             whereToSpawn = new Vector2(transform.position.x, rndY);
-            Instantiate(obstacle, whereToSpawn, Quaternion.identity);
+            
+            GameObject gameObject = Instantiate(obstacle, whereToSpawn, Quaternion.identity);
+
+            spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            spriteType = Random.Range(0, 5);
+            spriteRenderer.sprite = obstacles[spriteType];
         }
 
         if (Time.deltaTime > newSpawnRate && spawnRate > 0)
