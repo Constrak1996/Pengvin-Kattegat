@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParalaxMovement : MonoBehaviour
+public class ForegroundMovement : MonoBehaviour
 {
     private bool Right;
     private bool Left;
@@ -33,5 +33,10 @@ public class ParalaxMovement : MonoBehaviour
 
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
         rb2d.AddForce(movementLeft);
+
+        if (transform.position.x <= -17.64506)
+        {
+            transform.Translate(40, 0, 0);
+        }
     }
 }
