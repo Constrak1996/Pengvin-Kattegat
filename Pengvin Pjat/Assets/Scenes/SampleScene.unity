@@ -394,14 +394,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7b5d80be287d24ca356b8cbb6be914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 1600688748186425374, guid: 6a1b0b3d3f49e8541ac0953a1583f986,
+  obstacle: {fileID: 6378097481433689446, guid: 6a1b0b3d3f49e8541ac0953a1583f986,
     type: 3}
   obstacles:
-  - {fileID: 21300000, guid: 69bcc3a0abfde3341a65c15567f2b5b8, type: 3}
+  - {fileID: 21300000, guid: 877fc2a5627335e4eb498fc7a6b8111f, type: 3}
   - {fileID: 21300000, guid: dcb455972318cc646913db566de3703e, type: 3}
-  - {fileID: 21300000, guid: 514b48d1a73cf434a842e63409d76366, type: 3}
-  - {fileID: 21300000, guid: 25eadd134524ffe41811fb8aa7d22aef, type: 3}
-  - {fileID: 21300000, guid: dbd968d9cac50be4487a219c25debb71, type: 3}
+  - {fileID: 21300000, guid: dc95492b49fc93042ad4c30dcc9a3d71, type: 3}
+  - {fileID: 21300000, guid: 50752e343a9dfb34e9400228191667e5, type: 3}
+  - {fileID: 21300000, guid: cfb5fdb3b527e5a498b9237ce175650f, type: 3}
 --- !u!4 &1181621510
 Transform:
   m_ObjectHideFlags: 0
