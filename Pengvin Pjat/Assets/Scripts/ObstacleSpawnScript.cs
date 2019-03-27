@@ -38,7 +38,6 @@ public class ObstacleSpawnScript : MonoBehaviour
             whereToSpawn = new Vector2(transform.position.x, rndY);
             
             GameObject gameObject = Instantiate(obstacle, whereToSpawn, Quaternion.identity);
-            GameObject gameObject2 = Instantiate(obstacle, whereToSpawn, Quaternion.identity);
             spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
             spriteType = Random.Range(0, 5);
             spriteRenderer.sprite = obstacles[spriteType];
