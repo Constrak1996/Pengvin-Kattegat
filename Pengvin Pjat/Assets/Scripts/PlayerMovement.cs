@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     float rotZ;
     float lerpTime = 5f;
     float currentLerpTime;
+    int maxRot = 100;
 
     // Use this for initialization
     void Start()
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Rotate penguin 15 degrees up and down based on input and default to 0 once no input is detected
         rotZ += movement.y * rotSpeed;
-        rotZ = Mathf.Clamp(rotZ, -100, 100);
+        rotZ = Mathf.Clamp(rotZ, -maxRot, maxRot);
 
         if (moveVertical > 0 || moveVertical < 0)
         {
