@@ -16,9 +16,9 @@ public class ObstacleMovement : MonoBehaviour
     {
         transform.Translate(speed, 0, 0);
 
-        //if (transform.position.x == 0)
-        //{
-        //    Destroy(gameObject);
-        //}
+        if (transform.position.x <= -12)
+        {
+            Destroy(gameObject);
+        }
     }
 }
