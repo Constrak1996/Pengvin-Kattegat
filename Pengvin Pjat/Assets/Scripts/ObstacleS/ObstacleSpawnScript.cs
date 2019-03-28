@@ -8,6 +8,8 @@ public class ObstacleSpawnScript : MonoBehaviour
 
     private float newSpawnRate = 10;
 
+    private ObstacleMovement ObstacleMovement;
+
     private float rndY;
 
     private Vector2 whereToSpawn;
@@ -47,6 +49,7 @@ public class ObstacleSpawnScript : MonoBehaviour
         {
             spawnRate -= 0.5f;
             newSpawnRate += 10;
+            ObstacleMovement.Speed -= 0.05f;
         }
 
     }
