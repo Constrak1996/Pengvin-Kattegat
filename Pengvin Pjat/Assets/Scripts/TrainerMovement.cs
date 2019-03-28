@@ -7,6 +7,7 @@ public class TrainerMovement : MonoBehaviour
     private bool Right;
     private bool Left;
     private float patrolTime;
+    private int flippedRight;
 
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
 
@@ -33,19 +34,30 @@ public class TrainerMovement : MonoBehaviour
 
 
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
-        if (patrolTime > 0 && patrolTime < 11)
+        if (patrolTime > 0 && patrolTime < 14)
         {
             rb2d.AddForce(movementRight);
+            while (flippedRight == 0)
+            {
+                this.transform.Rotate(0, 180, 0);
+                flippedRight = 1;
+            }       
         }
 
-        if (patrolTime >= 11 && patrolTime < 22)
+        if (patrolTime >= 15 && patrolTime < 29)
         {
             rb2d.AddForce(movementLeft);
+            while (flippedRight == 1)
+            {
+                this.transform.Rotate(0, 180, 0);
+                flippedRight = 0;
+            }
         }
 
-        if (patrolTime >= 22)
+        if (patrolTime >= 29)
         {
             patrolTime = 0;
+            flippedRight = 0;
         }
     }
 }
