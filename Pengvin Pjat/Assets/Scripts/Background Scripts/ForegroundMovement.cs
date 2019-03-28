@@ -10,6 +10,7 @@ public class ForegroundMovement : MonoBehaviour
 
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
     public float speed;
+    public float jumpPosition;
 
     // Use this for initialization
     void Start()
@@ -34,9 +35,9 @@ public class ForegroundMovement : MonoBehaviour
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
         rb2d.AddForce(movementLeft);
 
-        if (transform.position.x <= -17.64506)
+        if (transform.position.x <= jumpPosition)
         {
-            transform.Translate(40, 0, 0);
+            transform.Translate(59.4153f, 0, 0);
         }
     }
 }

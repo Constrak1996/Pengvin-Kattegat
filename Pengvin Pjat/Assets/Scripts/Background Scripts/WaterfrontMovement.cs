@@ -37,7 +37,7 @@ public class WaterfrontMovement : MonoBehaviour
 
         if (transform.position.x <= jumpPositionX)
         {
-            transform.Translate(40, 0, 0);
+            transform.Translate(57.539f, 0, 0);
         }
     }
 }
