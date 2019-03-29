@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleMovement : MonoBehaviour
+public class OutOfBoundsDestroyer : MonoBehaviour
 {
-    public float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +13,14 @@ public class ObstacleMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(speed, 0, 0);
+        
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Fish" || other.tag == "Obstacle")
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
