@@ -2423,6 +2423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1066384242}
   - component: {fileID: 1066384241}
+  - component: {fileID: 1066384243}
   m_Layer: 0
   m_Name: BackgrundMusic
   m_TagString: Untagged
@@ -2542,6 +2543,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1066384243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066384240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461a69dc1ee39814894afe9cffe9e5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asource: {fileID: 1066384241}
 --- !u!1 &1084990100
 GameObject:
   m_ObjectHideFlags: 0
@@ -2624,10 +2638,6 @@ MonoBehaviour:
   spawnDelay: 10
   objectA: {fileID: 1134029986}
   objectB: {fileID: 408060646}
-  fish:
-  - {fileID: 21300000, guid: e0fd5ea1480a1b84b919c7642868afef, type: 3}
-  - {fileID: 21300000, guid: eb66e407bb141a646900d34b3327a3ef, type: 3}
-  - {fileID: 21300000, guid: db0295feb7dda984fbc18a3af8383a02, type: 3}
 --- !u!212 &1134029988
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3209,6 +3219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1564316298}
   - component: {fileID: 1564316299}
+  - component: {fileID: 1564316300}
   m_Layer: 0
   m_Name: BackgrundMusic2
   m_TagString: Untagged
@@ -3326,6 +3337,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1564316300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564316297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461a69dc1ee39814894afe9cffe9e5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asource: {fileID: 1564316299}
 --- !u!1001 &1579863208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3455,6 +3479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1692349759}
   - component: {fileID: 1692349760}
+  - component: {fileID: 1692349761}
   m_Layer: 0
   m_Name: BackgrundNoise
   m_TagString: Untagged
@@ -3572,6 +3597,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1692349761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692349758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461a69dc1ee39814894afe9cffe9e5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asource: {fileID: 1692349760}
 --- !u!1 &1824920240
 GameObject:
   m_ObjectHideFlags: 0
