@@ -4187,7 +4187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharkPrefab: {fileID: 704696405163900406, guid: 0b766bdfbc93e7b46b9fdbed65b0f8b6,
     type: 3}
-  respawnTime: 2
+  respawnTime: 30
 --- !u!4 &2039949741
 Transform:
   m_ObjectHideFlags: 0

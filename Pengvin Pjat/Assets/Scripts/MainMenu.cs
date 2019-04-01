@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     public void StartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+        SceneManager.LoadScene(1);
     }
 
     public void Mute()
@@ -25,12 +25,10 @@ public class MainMenu : MonoBehaviour
         if(soundMute == false)
         {
             soundMute = true;
-            //Debug.Log("Sounds has been muted");
         }
         else
         {
             soundMute = true;
-            //Debug.Log("Sounds has been unmuted");
         }
 
     }
