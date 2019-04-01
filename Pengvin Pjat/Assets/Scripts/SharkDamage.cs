@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class SharkDamage : MonoBehaviour
 {
+    bool attackAble = true;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         Health.health -= 1;
+        DamageCooldown();
+    }
+
+    IEnumerator DamageCooldown()
+    {
+        attackAble = false;
+        yield return new WaitForSeconds(2);
+        attackAble = true;
     }
 }
