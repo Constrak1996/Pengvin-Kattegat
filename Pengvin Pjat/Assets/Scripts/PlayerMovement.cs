@@ -9,11 +9,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
 
     Vector2 movement;
-    float rotSpeed = 0.5f;
+    float rotSpeed = 1.4f;
     float rotZ;
     float lerpTime = 5f;
     float currentLerpTime;
-    int maxRot = 90;
+    int maxRot = 30;
 
     // Use this for initialization
     void Start()
