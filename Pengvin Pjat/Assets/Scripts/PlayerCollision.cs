@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-
+    // Sets the players startposition, so we can use it to reset his position when taking damage
     Vector2 startPos;
+
+    private float stunTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +25,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.tag == "Obstacle")
         {
-
+            PlayerMovement.stunned = true;
         }
         else if (collision.tag == "Fish")
         {
