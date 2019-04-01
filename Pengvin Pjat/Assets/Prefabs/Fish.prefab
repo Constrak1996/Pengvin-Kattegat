@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7106564933819757759}
   - component: {fileID: 1392683059772181039}
   - component: {fileID: 2486828354953753740}
+  - component: {fileID: 8297151807437083122}
   m_Layer: 0
   m_Name: Fish
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,3 +102,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &8297151807437083122
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2208743044442896151}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.067417495, y: 0.117983505}
+  m_Size: {x: 1.7200077, y: 0.82661587}
+  m_Direction: 1

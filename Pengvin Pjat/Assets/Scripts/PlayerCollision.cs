@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    private int health = 3;
 
-    public int Health { get => health; set => health = value; }
-
-    public int fishCounter = 0;
-
+    Vector2 startPos;
     // Start is called before the first frame update
     void Start()
     {
-        
+        startPos = gameObject.transform.position;
     }
 
     // Update is called once per frame
@@ -26,16 +22,17 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.tag == "Obstacle")
         {
-            Debug.Log("We hit an obstacle");
-            Health--;
-            Debug.Log(Health);
-            Destroy(collision.gameObject);
+
         }
         else if (collision.tag == "Fish")
         {
-            fishCounter++;
-            Debug.Log($"We caught a fish. fish counter: {fishCounter}");
+            Score.score++;
             Destroy(collision.gameObject);
+        }
+        else if (collision.tag == "DeathWall")
+        {
+            Health.health--;
+            gameObject.transform.position = startPos;
         }
     }
 }
