@@ -1472,6 +1472,10 @@ MonoBehaviour:
   spawnDelay: 10
   objectA: {fileID: 1134029986}
   objectB: {fileID: 408060646}
+  fish:
+  - {fileID: 21300000, guid: e0fd5ea1480a1b84b919c7642868afef, type: 3}
+  - {fileID: 21300000, guid: eb66e407bb141a646900d34b3327a3ef, type: 3}
+  - {fileID: 21300000, guid: db0295feb7dda984fbc18a3af8383a02, type: 3}
 --- !u!212 &1134029988
 SpriteRenderer:
   m_ObjectHideFlags: 0
