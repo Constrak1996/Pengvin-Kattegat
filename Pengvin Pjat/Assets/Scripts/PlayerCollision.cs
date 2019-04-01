@@ -6,6 +6,7 @@ public class PlayerCollision : MonoBehaviour
 {
 
     Vector2 startPos;
+    int fishHeal = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +29,17 @@ public class PlayerCollision : MonoBehaviour
         {
             Score.score++;
             Destroy(collision.gameObject);
+            fishHeal++;
         }
         else if (collision.tag == "DeathWall")
         {
             Health.health--;
             gameObject.transform.position = startPos;
+        }
+        else if (fishHeal == 5)
+        {
+            Health.health += 1;
+            fishHeal = 0;
         }
     }
 }
