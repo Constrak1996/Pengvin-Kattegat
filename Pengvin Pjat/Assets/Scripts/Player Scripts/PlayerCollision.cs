@@ -9,6 +9,11 @@ public class PlayerCollision : MonoBehaviour
 
     private float stunTime;
 
+<<<<<<< HEAD
+    int fishHeal = 0;
+
+=======
+>>>>>>> master
     // Start is called before the first frame update
     void Start()
     {
@@ -37,5 +42,25 @@ public class PlayerCollision : MonoBehaviour
             Health.health--;
             gameObject.transform.position = startPos;
         }
+<<<<<<< HEAD
+        else if (fishHeal == 5)
+        {
+            Health.health += 1;
+            fishHeal = 0;
+        }
+        else if (collision.tag == "SixPackTrash")
+        {
+            PlayerMovement.slowed = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "SixPackTrash")
+        {
+            PlayerMovement.slowed = false;
+        }
+=======
+>>>>>>> master
     }
 }
