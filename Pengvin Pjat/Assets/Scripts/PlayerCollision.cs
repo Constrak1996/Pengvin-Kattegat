@@ -42,5 +42,17 @@ public class PlayerCollision : MonoBehaviour
             Health.health += 1;
             fishHeal = 0;
         }
+        else if (collision.tag == "SixPackTrash")
+        {
+            PlayerMovement.slowed = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "SixPackTrash")
+        {
+            PlayerMovement.slowed = false;
+        }
     }
 }

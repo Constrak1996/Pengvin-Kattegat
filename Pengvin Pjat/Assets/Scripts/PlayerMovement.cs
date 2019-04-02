@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     private float stunTime;
 
+    public static bool slowed;
+
     Vector2 movement;
     float rotSpeed = 1.4f;
     float rotZ;
@@ -64,7 +66,8 @@ public class PlayerMovement : MonoBehaviour
         {
             stunTime += Time.deltaTime;
             speed = 0;
-            transform.Translate(-0.015f, 0, 0);
+
+            transform.Translate(-0.025f, 0, 0);
 
             if (stunTime > 1)
             {
@@ -73,6 +76,16 @@ public class PlayerMovement : MonoBehaviour
                 speed = 20;
             }
         }
+
+        if (slowed)
+        {
+            speed = 3;
+        }
+        else if (!slowed)
+        {
+            speed = 20;
+        }
+
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
