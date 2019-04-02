@@ -14,10 +14,7 @@ public class MainMenu : MonoBehaviour
         soundMute = false;
     }
     // Start is called before the first frame update
-    public void StartGame()
-    {
-        SceneManager.LoadScene(1);
-    }
+
 
     /// <summary>
     /// Method for sending the user to a new scene
