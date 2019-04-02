@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+guid: 96ff358045f54ce47973b8d20235e977
+=======
 guid: f915497e6006aec4fbed2a2264d9472b
+>>>>>>> master
 =======
 guid: 4a1153df236676b4d89adf5aa3fc310a
 >>>>>>> master
@@ -80,7 +84,11 @@ TextureImporter:
     physicsShape: []
     bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
+    spriteID: 501e9b2ee5dfaf24a91d30adb62838b4
+=======
     spriteID: 5328f8831ab327749bb5b3c34dd43f2e
+>>>>>>> master
 =======
     spriteID: 253f7fed225f6c24ca6410eee80479d5
 >>>>>>> master

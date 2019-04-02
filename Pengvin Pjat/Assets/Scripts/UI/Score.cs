@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     //Field and property for the score
-    private int score;
-    public int ScorePoints { get => score; set => score = value; }
+    public static int score;
 
     Text scoreText;
     /// <summary>
@@ -19,16 +18,9 @@ public class Score : MonoBehaviour
         score = 0;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Score; " + score;
-        
+        scoreText.text = "Score: " + score;
     }
 }

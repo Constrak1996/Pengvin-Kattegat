@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-     
+using UnityEngine.SceneManagement;
+
 public class Health : MonoBehaviour
 {
     // Field and property for the players health
-    private int health;
-    public int HealthPoints { get => health; set => health = value; }
+    public static int health;
+    //public int HealthPoints { get => health; set => health = value; }
+    public static int deathScore;
 
     Text healthText;
 
@@ -33,11 +35,17 @@ public class Health : MonoBehaviour
     /// </summary>
     void Update()
     {
-        healthText.text = "Hp left:" + health;        
-        
-        if(HealthPoints <= 0)
+        healthText.text = "Hp left:" + health;
+
+        if (health <= 0)
         {
-            
+            Death();
         }
+    }
+
+    static public void Death()
+    {
+        deathScore = Score.score;
+        SceneManager.LoadScene(2);
     }
 }
