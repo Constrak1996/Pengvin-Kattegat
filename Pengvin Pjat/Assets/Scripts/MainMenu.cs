@@ -19,6 +19,15 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    /// <summary>
+    /// Method for sending the user to a new scene
+    /// </summary>
+    /// <param name="scene">0 is main menu, 1 is the game & 2 is deathscreen</param>
+    public void ToNewScene(int scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
     public void Mute()
     {
         asource.mute =! asource.mute;
