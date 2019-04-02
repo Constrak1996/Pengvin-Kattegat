@@ -8,13 +8,20 @@ public class ObstacleMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(speed, 0, 0);
+        if (Time.timeScale == 1)
+        {
+            transform.Translate(speed, 0, 0);
+        }
+        else
+        {
+
+        }
 
         if (transform.position.x <= -12)
         {

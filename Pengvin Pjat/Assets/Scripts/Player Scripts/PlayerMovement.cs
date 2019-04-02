@@ -56,7 +56,14 @@ public class PlayerMovement : MonoBehaviour
 
             float percent = currentLerpTime / lerpTime;
             rotZ = Mathf.Lerp(rotZ, 0, percent);
-            transform.eulerAngles = new Vector3(0, 0, rotZ);
+            if (Time.timeScale == 1)
+            {
+                transform.eulerAngles = new Vector3(0, 0, rotZ);
+            }
+            else
+            {
+
+            }
 
             //transform.eulerAngles = new Vector3(0, 0, rotZ);
         }
