@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     // Field and property for the players health
-    private int health;
-    public int HealthPoints { get => health; set => health = value; }
+    public static int health;
+    //public int HealthPoints { get => health; set => health = value; }
 
     Text healthText;
 
@@ -35,9 +35,9 @@ public class Health : MonoBehaviour
     {
         healthText.text = "Hp left:" + health;        
         
-        if(HealthPoints <= 0)
-        {
+        //if(HealthPoints <= 0)
+        //{
             
-        }
+        //}
     }
 }

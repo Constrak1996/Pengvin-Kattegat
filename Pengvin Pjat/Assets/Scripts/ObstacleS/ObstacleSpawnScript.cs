@@ -6,13 +6,13 @@ public class ObstacleSpawnScript : MonoBehaviour
 {
     public GameObject obstacle;
 
-    private float newSpawnRate = 10;
+    private float newSpawnRate = 15;
 
     private float rndY;
 
     private Vector2 whereToSpawn;
 
-    private float spawnRate = 5;
+    private float spawnRate = 8;
 
     private float nextSpawn = 0.0f;
 

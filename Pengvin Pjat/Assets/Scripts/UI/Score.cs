@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     //Field and property for the score
-    private int score;
-    public int ScorePoints { get => score; set => score = value; }
+    public static int score;
+    //public int ScorePoints { get => score; set => score = value; }
 
     Text scoreText;
     /// <summary>

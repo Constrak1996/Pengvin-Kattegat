@@ -15,6 +15,10 @@ public class FishSpawner : MonoBehaviour
     public Transform objectA;
     public Transform objectB;
 
+    private int spriteType;
+    private SpriteRenderer spriteRenderer;
+    public Sprite[] fish = new Sprite[3];
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +41,10 @@ public class FishSpawner : MonoBehaviour
     private void Spawn()
     {
         nextSpawnTime = Time.time + spawnDelay;
-        Instantiate(fishPrefab, transform.position, transform.rotation);
+        GameObject clone = Instantiate(fishPrefab, transform.position, transform.rotation);
+        spriteRenderer = clone.GetComponent<SpriteRenderer>();
+        spriteType = UnityEngine.Random.Range(0, 3);
+        spriteRenderer.sprite = fish[spriteType];
     }
 
     private bool ShouldSpawn()

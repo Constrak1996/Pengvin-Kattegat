@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public AudioSource asource;
-    bool soundMute;
-
+    public static bool soundMute;
+    
     public void start()
     {
-        //asource = GetComponent<AudioSource>();
+        asource = GetComponent<AudioSource>();
         soundMute = false;
     }
     // Start is called before the first frame update
@@ -21,16 +21,16 @@ public class MainMenu : MonoBehaviour
 
     public void Mute()
     {
-        //asource.mute =! asource.mute;
+        asource.mute =! asource.mute;
         if(soundMute == false)
         {
             soundMute = true;
-            Debug.Log("Sounds has been muted");
+            //Debug.Log("Sounds has been muted");
         }
         else
         {
             soundMute = true;
-            Debug.Log("Sounds has been unmuted");
+            //Debug.Log("Sounds has been unmuted");
         }
 
     }
