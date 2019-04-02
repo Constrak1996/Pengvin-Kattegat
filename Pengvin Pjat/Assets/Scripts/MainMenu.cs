@@ -9,12 +9,6 @@ public class MainMenu : MonoBehaviour
     public AudioSource asource;
     public static bool soundMute;
 
-    Text scoreText;
-
-    public void Awake()
-    {
-        scoreText = GetComponent<Text>();
-    }
 
     public void start()
     {
@@ -31,11 +25,6 @@ public class MainMenu : MonoBehaviour
     public void ToNewScene(int scene)
     {
         SceneManager.LoadScene(scene);
-    }
-
-    public void Update()
-    {
-        scoreText.text = "Highscore: " + Health.deathScore;
     }
 
     public void Mute()
