@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     float rotZ;
     float lerpTime = 5f;
     float currentLerpTime;
-    int maxRot = 90;
+    int maxRot = 30;
 
     public Joystick joystick;
 
@@ -31,19 +31,14 @@ public class PlayerMovement : MonoBehaviour
         float moveVertical = 0;
         if (Mathf.Abs(joystick.Horizontal) >= 0.2f || Mathf.Abs(joystick.Vertical) >= 0.2f)
         {
-            movement = new Vector2(joystick.Horizontal, joystick.Vertical);
-            Debug.Log(movement);
+            moveHorizontal = joystick.Horizontal;
+            moveVertical = joystick.Vertical;
+            movement = new Vector2(moveHorizontal, moveVertical);
         }
         else
         {
             movement = Vector2.zero;
         }
-
-        //Store the current vertical input in the float moveVertical.
-        
-
-        //Use the two store floats to create a new Vector2 variable movement.
-        //movement = new Vector2(moveHorizontal, moveVertical);
 
         //Rotate penguin 15 degrees up and down based on input and default to 0 once no input is detected
         rotZ += movement.y * rotSpeed;
@@ -62,9 +57,6 @@ public class PlayerMovement : MonoBehaviour
         float percent = currentLerpTime / lerpTime;
         rotZ = Mathf.Lerp(rotZ, 0, percent);
         transform.eulerAngles = new Vector3(0, 0, rotZ);
-
-        //transform.eulerAngles = new Vector3(0, 0, rotZ);
-
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
