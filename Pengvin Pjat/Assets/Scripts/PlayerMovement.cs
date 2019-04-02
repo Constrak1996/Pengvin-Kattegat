@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     float currentLerpTime;
     int maxRot = 90;
 
+    public Joystick joystick;
+
     // Use this for initialization
     void Start()
     {
@@ -25,13 +27,23 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         //Store the current horizontal input in the float moveHorizontal.
-        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        float moveHorizontal = 0;
+        float moveVertical = 0;
+        if (Mathf.Abs(joystick.Horizontal) >= 0.2f || Mathf.Abs(joystick.Vertical) >= 0.2f)
+        {
+            movement = new Vector2(joystick.Horizontal, joystick.Vertical);
+            Debug.Log(movement);
+        }
+        else
+        {
+            movement = Vector2.zero;
+        }
 
         //Store the current vertical input in the float moveVertical.
-        float moveVertical = Input.GetAxisRaw("Vertical");
+        
 
         //Use the two store floats to create a new Vector2 variable movement.
-        movement = new Vector2(moveHorizontal, moveVertical);
+        //movement = new Vector2(moveHorizontal, moveVertical);
 
         //Rotate penguin 15 degrees up and down based on input and default to 0 once no input is detected
         rotZ += movement.y * rotSpeed;
