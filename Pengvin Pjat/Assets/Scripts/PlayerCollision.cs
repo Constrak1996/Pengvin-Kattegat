@@ -6,13 +6,11 @@ public class PlayerCollision : MonoBehaviour
 {
     // Sets the players startposition, so we can use it to reset his position when taking damage
     Vector2 startPos;
-<<<<<<< HEAD
 
     private float stunTime;
 
-=======
     int fishHeal = 0;
->>>>>>> 2fd5921c1badb859d3aa54bef3601cbd1373e16c
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +44,18 @@ public class PlayerCollision : MonoBehaviour
         {
             Health.health += 1;
             fishHeal = 0;
+        }
+        else if (collision.tag == "SixPackTrash")
+        {
+            PlayerMovement.slowed = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "SixPackTrash")
+        {
+            PlayerMovement.slowed = false;
         }
     }
 }
