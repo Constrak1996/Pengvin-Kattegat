@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     // Field and property for the players health
     public static int health;
     //public int HealthPoints { get => health; set => health = value; }
+    public static int deathScore;
 
     Text healthText;
 
@@ -44,6 +45,7 @@ public class Health : MonoBehaviour
 
     static public void Death()
     {
+        deathScore = Score.score;
         SceneManager.LoadScene(2);
     }
 }
