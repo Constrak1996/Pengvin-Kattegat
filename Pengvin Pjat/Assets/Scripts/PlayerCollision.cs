@@ -6,8 +6,8 @@ public class PlayerCollision : MonoBehaviour
 {
     // Sets the players startposition, so we can use it to reset his position when taking damage
     Vector2 startPos;
-
     private float stunTime;
+    int fishHeal = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +36,11 @@ public class PlayerCollision : MonoBehaviour
         {
             Health.health--;
             gameObject.transform.position = startPos;
+        }
+        else if (fishHeal == 5)
+        {
+            Health.health += 1;
+            fishHeal = 0;
         }
     }
 }
