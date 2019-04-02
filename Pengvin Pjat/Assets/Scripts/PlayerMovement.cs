@@ -10,8 +10,6 @@ public class PlayerMovement : MonoBehaviour
 
     public static bool stunned;
 
-    public static bool slowed;
-
     private float stunTime;
 
     Vector2 movement;
@@ -74,15 +72,6 @@ public class PlayerMovement : MonoBehaviour
                 stunTime = 0;
                 speed = 20;
             }
-        }
-
-        if (slowed is true)
-        {
-            speed = 3;
-        }
-        else if (slowed is false)
-        {
-            speed = 20;
         }
     }
 

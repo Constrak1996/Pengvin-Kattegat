@@ -7,7 +7,6 @@ TagManager:
   - Obstacle
   - Fish
   - DeathWall
-  - SixPackTrash
   layers:
   - Default
   - TransparentFX
