@@ -26,21 +26,35 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        //Store the current horizontal input in the float moveHorizontal.
+        //Reset our movement vector
+        movement = Vector2.zero;
+
+        //Variables to store our direction in
         float moveHorizontal = 0;
         float moveVertical = 0;
-        if (Mathf.Abs(joystick.Horizontal) >= 0.2f || Mathf.Abs(joystick.Vertical) >= 0.2f)
+
+        //Input for PC
+        moveHorizontal = Input.GetAxisRaw("Horizontal");
+        moveVertical = Input.GetAxisRaw("Vertical");
+        movement = new Vector2(moveHorizontal, moveVertical);
+        movement.Normalize();
+
+        //Inputs for mobile
+        float joystickHorAbs = Mathf.Abs(joystick.Horizontal);
+        float joystickVerAbs = Mathf.Abs(joystick.Vertical);
+
+        if (joystickHorAbs >= 0.2f || joystickVerAbs >= 0.2f)
         {
             moveHorizontal = joystick.Horizontal;
             moveVertical = joystick.Vertical;
             movement = new Vector2(moveHorizontal, moveVertical);
-        }
-        else
-        {
-            movement = Vector2.zero;
+            if (joystickHorAbs + joystickVerAbs > 1)
+            {
+                movement.Normalize();
+            }
         }
 
-        //Rotate penguin 15 degrees up and down based on input and default to 0 once no input is detected
+        //Rotate penguin degrees up and down based on input and default to 0 once no input is detected
         rotZ += movement.y * rotSpeed;
         rotZ = Mathf.Clamp(rotZ, -maxRot, maxRot);
 
@@ -63,6 +77,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
-        rb2d.AddForce(movement.normalized * speed);
+        rb2d.AddForce(movement * speed);
     }
 }
