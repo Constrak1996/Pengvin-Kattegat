@@ -199,6 +199,26 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1703766294, guid: 3e009d45cb473044892ebcd9d428eeb7, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.13726115
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703766294, guid: 3e009d45cb473044892ebcd9d428eeb7, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.10848875
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703766294, guid: 3e009d45cb473044892ebcd9d428eeb7, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6811577
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703766294, guid: 3e009d45cb473044892ebcd9d428eeb7, type: 3}
+      propertyPath: m_Size.x
+      value: 2.5254774
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703766294, guid: 3e009d45cb473044892ebcd9d428eeb7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e009d45cb473044892ebcd9d428eeb7, type: 3}
 --- !u!1 &109102907
@@ -1810,6 +1830,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!1001 &784487006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1929,6 +1950,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacle: {fileID: 9028486301871066320, guid: 6ead7755ee4644144aa02c8a92a926dd,
     type: 3}
+=======
+>>>>>>> master
 --- !u!1 &863118112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,6 +2492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1066384242}
   - component: {fileID: 1066384241}
+  - component: {fileID: 1066384243}
   m_Layer: 0
   m_Name: BackgrundMusic
   m_TagString: Untagged
@@ -2588,6 +2612,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1066384243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066384240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461a69dc1ee39814894afe9cffe9e5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asource: {fileID: 1066384241}
 --- !u!1 &1084990100
 GameObject:
   m_ObjectHideFlags: 0
@@ -2617,7 +2654,6 @@ Transform:
   m_Children:
   - {fileID: 408060646}
   - {fileID: 1134029986}
-  - {fileID: 1503049246}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3123,6 +3159,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1439834792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8732769545361582842, guid: 3e009d45cb473044892ebcd9d428eeb7,
+    type: 3}
+  m_PrefabInstance: {fileID: 59971125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1439834800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439834792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53093d34d43ec1c4cb1300f7c9769693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1446230943
 GameObject:
   m_ObjectHideFlags: 0
@@ -3239,12 +3293,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1503049246 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7106564933819757759, guid: 824181597b08cc84b86f5d6b0450b239,
-    type: 3}
-  m_PrefabInstance: {fileID: 784487006}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1564316297
 GameObject:
   m_ObjectHideFlags: 0
@@ -3255,6 +3303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1564316298}
   - component: {fileID: 1564316299}
+  - component: {fileID: 1564316300}
   m_Layer: 0
   m_Name: BackgrundMusic2
   m_TagString: Untagged
@@ -3372,6 +3421,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1564316300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564316297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461a69dc1ee39814894afe9cffe9e5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asource: {fileID: 1564316299}
 --- !u!1001 &1579863208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3521,6 +3583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1692349759}
   - component: {fileID: 1692349760}
+  - component: {fileID: 1692349761}
   m_Layer: 0
   m_Name: BackgrundNoise
   m_TagString: Untagged
@@ -3638,6 +3701,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1692349761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692349758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461a69dc1ee39814894afe9cffe9e5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asource: {fileID: 1692349760}
 --- !u!1 &1824920240
 GameObject:
   m_ObjectHideFlags: 0
@@ -4142,6 +4218,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2039949739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2039949741}
+  - component: {fileID: 2039949740}
+  m_Layer: 0
+  m_Name: Shark Attack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2039949740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039949739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bcd514befaa963429ab800e20dd3d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharkPrefab: {fileID: 704696405163900406, guid: 0b766bdfbc93e7b46b9fdbed65b0f8b6,
+    type: 3}
+  respawnTime: 3
+--- !u!4 &2039949741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039949739}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.37, y: 0.6, z: 0.844402}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2066710591
 GameObject:
   m_ObjectHideFlags: 0

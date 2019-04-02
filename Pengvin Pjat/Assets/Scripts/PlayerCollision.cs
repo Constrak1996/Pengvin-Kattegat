@@ -9,8 +9,11 @@ public class PlayerCollision : MonoBehaviour
 
     private float stunTime;
 
+<<<<<<< HEAD
     int fishHeal = 0;
 
+=======
+>>>>>>> master
     // Start is called before the first frame update
     void Start()
     {
@@ -33,13 +36,13 @@ public class PlayerCollision : MonoBehaviour
         {
             Score.score++;
             Destroy(collision.gameObject);
-            fishHeal++;
         }
         else if (collision.tag == "DeathWall")
         {
             Health.health--;
             gameObject.transform.position = startPos;
         }
+<<<<<<< HEAD
         else if (fishHeal == 5)
         {
             Health.health += 1;
@@ -57,5 +60,7 @@ public class PlayerCollision : MonoBehaviour
         {
             PlayerMovement.slowed = false;
         }
+=======
+>>>>>>> master
     }
 }
