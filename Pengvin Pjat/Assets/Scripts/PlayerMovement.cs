@@ -6,6 +6,10 @@ public class PlayerMovement : MonoBehaviour
 {
     private float speed = 20;             //Floating point variable to store the player's movement speed.
 
+    public float boostPower;
+
+    public float ObstacleBounce;
+
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
 
     public static bool stunned;
@@ -13,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private float stunTime;
 
     public static bool slowed;
+
+    private Vector2 direction;
 
     Vector2 movement;
     float rotSpeed = 1.4f;
@@ -31,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        direction = rb2d.velocity;
+
         if (stunned is false)
         {
             //Store the current horizontal input in the float moveHorizontal.
@@ -61,13 +69,18 @@ public class PlayerMovement : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, rotZ);
 
             //transform.eulerAngles = new Vector3(0, 0, rotZ);
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                GetComponent<Rigidbody2D>().AddForce(direction * boostPower, ForceMode2D.Impulse);
+            }
         }
         if (stunned is true)
         {
             stunTime += Time.deltaTime;
             speed = 0;
 
-            transform.Translate(-0.025f, 0, 0);
+            
 
             if (stunTime > 1)
             {

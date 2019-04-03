@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b997fb6761a3e04badbeaa7ead89f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boostPower: 5
+  ObstacleBounce: 10
 --- !u!50 &8732769545361582847
 Rigidbody2D:
   serializedVersion: 4
