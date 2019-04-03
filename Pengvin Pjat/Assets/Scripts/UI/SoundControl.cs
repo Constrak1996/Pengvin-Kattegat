@@ -8,7 +8,7 @@ public class SoundControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(MainMenu.soundMute);
+        //Debug.Log(MainMenu.soundMute);
         asource = GetComponent<AudioSource>();
         if (MainMenu.soundMute == true)
         {
