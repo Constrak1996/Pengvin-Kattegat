@@ -45,8 +45,8 @@ public class PlayerMovement : MonoBehaviour
         movement = Vector2.zero;
 
         direction = rb2d.velocity;
-         
-        if (stunned is false)
+
+        if (!stunned)
         {
             //Variables to store our direction in
             float moveHorizontal = 0;
@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
                 currentLerpTime = lerpTime;
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) && !usedBoost)
+            if (Input.GetKeyDown(KeyCode.Space) && !usedBoost && !stunned)
             {
                 GetComponent<Rigidbody2D>().AddForce(direction * boostPower, ForceMode2D.Impulse);
                 usedBoost = true;
@@ -94,7 +94,6 @@ public class PlayerMovement : MonoBehaviour
         {
             stunTime += Time.deltaTime;
             speed = 0;
-
             transform.Translate(-direction * Time.deltaTime * obstacleBouncePower);
 
             if (stunTime > 1)
@@ -116,6 +115,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (slowed)
         {
+            if (rb2d.velocity == Vector2.zero)
+            {
+                transform.Translate(-0.015f, 0, 0);
+            }
+
             speed = 3;
         }
         else if (!slowed)

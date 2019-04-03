@@ -26,6 +26,10 @@ public class MainMenu : MonoBehaviour
     /// <param name="scene">0 is main menu, 1 is the game & 2 is deathscreen</param>
     public void ToNewScene(int scene)
     {
+        if (scene is 1)
+        {
+            PlayerMovement.slowed = false;
+        }
         SceneManager.LoadScene(scene);
     }
 

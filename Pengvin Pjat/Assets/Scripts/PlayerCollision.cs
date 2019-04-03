@@ -39,6 +39,7 @@ public class PlayerCollision : MonoBehaviour
         {
             Health.health--;
             gameObject.transform.position = startPos;
+            PlayerMovement.stunned = true;
         }
         else if (collision.tag == "HealthPickup")
         {
