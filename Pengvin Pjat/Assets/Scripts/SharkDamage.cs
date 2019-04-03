@@ -8,6 +8,7 @@ public class SharkDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        DamageCooldown();
         if (other.tag == "Shark")
         {
             Health.health -= 1;
