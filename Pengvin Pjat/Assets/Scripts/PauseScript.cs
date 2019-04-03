@@ -4,31 +4,51 @@ using UnityEngine;
 
 public class PauseScript : MonoBehaviour
 {
+
+    public static bool isGamePaused = false;
+
+    public GameObject UIMenu;
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if (Time.timeScale == 1)
+            if (isGamePaused)
             {
-                Time.timeScale = 0;
+                //Resume();
             }
             else
             {
-                Time.timeScale = 1;
+                //Pause();
             }
         }
     }
 
+    public void Resume()
+    {
+
+        isGamePaused = false;
+        Time.timeScale = 1;
+        UIMenu.SetActive(false);
+    }
+
     public void pauseGame()
     {
-        if (Time.timeScale == 1)
+        if (isGamePaused)
         {
-            Time.timeScale = 0;
+            Resume();
         }
         else
         {
-            Time.timeScale = 1;
+            isGamePaused = true;
+            Time.timeScale = 0;
+            UIMenu.SetActive(true);
         }
+    }
+
+    public void ResumeGame()
+    {
+        Resume();
     }
 }
