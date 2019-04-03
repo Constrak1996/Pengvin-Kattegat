@@ -10,6 +10,12 @@ public class PlayerMovement : MonoBehaviour
 
     public static bool stunned;
 
+    public float boostPower;
+
+    public float obstacleBouncePower;
+
+    private Vector2 direction;
+
     private float stunTime;
 
     public static bool slowed;
@@ -36,7 +42,8 @@ public class PlayerMovement : MonoBehaviour
         //Reset our movement vector
         movement = Vector2.zero;
 
-        
+        direction = rb2d.velocity;
+         
         if (stunned is false)
         {
             //Variables to store our direction in
@@ -73,13 +80,18 @@ public class PlayerMovement : MonoBehaviour
             {
                 currentLerpTime = lerpTime;
             }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                GetComponent<Rigidbody2D>().AddForce(direction * boostPower, ForceMode2D.Impulse);
+            }
         }
         if (stunned is true)
         {
             stunTime += Time.deltaTime;
             speed = 0;
 
-            transform.Translate(-0.025f, 0, 0);
+            transform.Translate(-direction * Time.deltaTime * obstacleBouncePower);
 
             if (stunTime > 1)
             {

@@ -219,6 +219,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8732769545361582846, guid: 3e009d45cb473044892ebcd9d428eeb7,
+        type: 3}
+      propertyPath: boostPower
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8732769545361582846, guid: 3e009d45cb473044892ebcd9d428eeb7,
+        type: 3}
+      propertyPath: obstacleBouncePower
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8732769545361582846, guid: 3e009d45cb473044892ebcd9d428eeb7,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 4378080642034543933, guid: c51f8e7b9e7f5234da318f8f4a02dca5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e009d45cb473044892ebcd9d428eeb7, type: 3}
 --- !u!1 &109102907
@@ -2000,9 +2016,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d335f2925b79f94dac7d3d6d3acc364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedPrefab: {fileID: 6993368588047302735, guid: d0a5c043bfbe42e44b7e4947744f0538,
-    type: 3}
-  respawnTime: 70
 --- !u!114 &803412107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2015,9 +2028,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e7a2ecfb4d6fb46b4fb750ed0580c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPrefab: {fileID: 441990580454816587, guid: 84509eef524341142a9dbacecf98a9fd,
-    type: 3}
-  respawnTime: 90
 --- !u!4 &803412108
 Transform:
   m_ObjectHideFlags: 0
@@ -2879,10 +2889,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1243070084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fd4a5ecb30e92c48bf900861c23f3fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f4a2f0935e329c40ac1e5adeb48e29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 2708810156318443083, guid: 43bc0c304d7bcfd419b02b2e1bacfc40,
+  obstacle: {fileID: 2708810156318443083, guid: 7271ddd01636c3541ad5b4cc017ab32b,
     type: 3}
 --- !u!1 &1243956052
 GameObject:
@@ -3676,6 +3686,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137709315141804389, guid: ff9175890785d9846a3af4f9e9ebd52d,
+        type: 3}
+      propertyPath: m_Name
+      value: DeathWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137709315141804389, guid: ff9175890785d9846a3af4f9e9ebd52d,
+        type: 3}
+      propertyPath: m_TagString
+      value: DeathWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137709315141804391, guid: ff9175890785d9846a3af4f9e9ebd52d,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -1.4542146
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137709315141804391, guid: ff9175890785d9846a3af4f9e9ebd52d,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.0326796
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff9175890785d9846a3af4f9e9ebd52d, type: 3}
