@@ -44,8 +44,7 @@ public class PlayerMovement : MonoBehaviour
         //Reset our movement vector
         movement = Vector2.zero;
 
-        direction = rb2d.velocity;
-         
+        
         if (stunned is false)
         {
             //Variables to store our direction in
@@ -95,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
             stunTime += Time.deltaTime;
             speed = 0;
 
-            transform.Translate(-direction * Time.deltaTime * obstacleBouncePower);
+            transform.Translate(-0.025f, 0, 0);
 
             if (stunTime > 1)
             {
