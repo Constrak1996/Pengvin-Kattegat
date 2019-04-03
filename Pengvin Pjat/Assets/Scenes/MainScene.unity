@@ -2037,7 +2037,7 @@ ParticleSystem:
     uvChannelMask: -1
     randomRow: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 453bf9e2841fac64a93dffdd74056586, type: 3}
+    - sprite: {fileID: 21300000, guid: e0ae3aec92801a94d93131d8d1342463, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -6720,8 +6720,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d335f2925b79f94dac7d3d6d3acc364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedPrefab: {fileID: 0}
-  respawnTime: 1
 --- !u!114 &803412107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6734,8 +6732,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e7a2ecfb4d6fb46b4fb750ed0580c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPrefab: {fileID: 0}
-  respawnTime: 0
 --- !u!4 &803412108
 Transform:
   m_ObjectHideFlags: 0
