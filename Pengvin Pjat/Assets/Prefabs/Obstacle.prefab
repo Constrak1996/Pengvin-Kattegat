@@ -12,7 +12,11 @@ GameObject:
   - component: {fileID: 7138350299360262948}
   - component: {fileID: 5811700186025846689}
   - component: {fileID: 8929652982203664454}
+<<<<<<< HEAD
   - component: {fileID: 4004533289255015898}
+=======
+  - component: {fileID: 5170471603307789750}
+>>>>>>> master
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Obstacle
@@ -111,14 +115,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 2.0991511}
   serializedVersion: 2
   m_Radius: 0.780849
+<<<<<<< HEAD
 --- !u!50 &4004533289255015898
 Rigidbody2D:
   serializedVersion: 4
+=======
+--- !u!114 &5170471603307789750
+MonoBehaviour:
+>>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3318416344964811514}
+<<<<<<< HEAD
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -132,3 +142,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+=======
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 679c7810d2a35d541ba359906ddf7c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: -0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 0
+    m_PostInfinity: 0
+    m_RotationOrder: 4
+>>>>>>> master

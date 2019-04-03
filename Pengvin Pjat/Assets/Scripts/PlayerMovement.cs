@@ -1,10 +1,10 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float speed = 20;             //Floating point variable to store the player's movement speed.
+    public static float speed = 20;         //Floating point variable to store the player's movement speed.
 
     public float boostPower;
 
@@ -21,11 +21,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 direction;
 
     Vector2 movement;
-    float rotSpeed = 1.4f;
+    float rotSpeed = 1f;
     float rotZ;
     float lerpTime = 5f;
     float currentLerpTime;
     int maxRot = 30;
+
+    public Joystick joystick;
 
     
     // Use this for initialization
@@ -37,23 +39,42 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+<<<<<<< HEAD
         direction = rb2d.velocity;
         //direction.Normalize();
 
+=======
+        //Reset our movement vector
+        movement = Vector2.zero;
+
+        
+>>>>>>> master
         if (stunned is false)
         {
-            //Store the current horizontal input in the float moveHorizontal.
-            float moveHorizontal = Input.GetAxisRaw("Horizontal");
+            //Variables to store our direction in
+            float moveHorizontal = 0;
+            float moveVertical = 0;
 
-            //Store the current vertical input in the float moveVertical.
-            float moveVertical = Input.GetAxisRaw("Vertical");
-
-            //Use the two store floats to create a new Vector2 variable movement.
+            //Input for PC
+            moveHorizontal = Input.GetAxisRaw("Horizontal");
+            moveVertical = Input.GetAxisRaw("Vertical");
             movement = new Vector2(moveHorizontal, moveVertical);
+            movement.Normalize();
 
-            //Rotate penguin 15 degrees up and down based on input and default to 0 once no input is detected
-            rotZ += movement.y * rotSpeed;
-            rotZ = Mathf.Clamp(rotZ, -maxRot, maxRot);
+            //Inputs for mobile
+            float joystickHorAbs = Mathf.Abs(joystick.Horizontal);
+            float joystickVerAbs = Mathf.Abs(joystick.Vertical);
+
+            if (joystickHorAbs >= 0.2f || joystickVerAbs >= 0.2f)
+            {
+                moveHorizontal = joystick.Horizontal;
+                moveVertical = joystick.Vertical;
+                movement = new Vector2(moveHorizontal, moveVertical);
+                if (joystickHorAbs + joystickVerAbs > 1)
+                {
+                    movement.Normalize();
+                }
+            }
 
             if (moveVertical > 0 || moveVertical < 0)
             {
@@ -64,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 currentLerpTime = lerpTime;
             }
+<<<<<<< HEAD
 
             float percent = currentLerpTime / lerpTime;
             rotZ = Mathf.Lerp(rotZ, 0, percent);
@@ -75,6 +97,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 GetComponent<Rigidbody2D>().AddForce(direction * boostPower, ForceMode2D.Impulse);
             }
+=======
+>>>>>>> master
         }
         if (stunned is true)
         {
@@ -90,6 +114,15 @@ public class PlayerMovement : MonoBehaviour
                 speed = 20;
             }
         }
+
+        
+
+        //Rotate penguin degrees up and down based on input and default to 0 once no input is detected
+        rotZ += movement.y * rotSpeed;
+        rotZ = Mathf.Clamp(rotZ, -maxRot, maxRot);
+        float percent = currentLerpTime / lerpTime;
+        rotZ = Mathf.Lerp(rotZ, 0, percent);
+        transform.eulerAngles = new Vector3(0, 0, rotZ);
 
         if (slowed)
         {
@@ -108,7 +141,7 @@ public class PlayerMovement : MonoBehaviour
         if (stunned is false)
         {
             //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
-            rb2d.AddForce(movement.normalized * speed);
+            rb2d.AddForce(movement * speed);
         }
     }
 
