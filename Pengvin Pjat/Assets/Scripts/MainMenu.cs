@@ -8,9 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     public AudioSource asource;
     public static bool soundMute;
-    public Sprite soundOn;
-    public Sprite soundOff;
-    public Button muteButton;
+
 
     public void start()
     {
@@ -32,7 +30,6 @@ public class MainMenu : MonoBehaviour
     public void Mute()
     {
         asource.mute =! asource.mute;
-        ChangeImage();
         if(soundMute == false)
         {
             soundMute = true;
@@ -41,17 +38,7 @@ public class MainMenu : MonoBehaviour
         {
             soundMute = true;
         }
-    }
 
-    public void ChangeImage()
-    {
-        if(soundMute == false)
-        {
-            muteButton.image.sprite = soundOff;
-        }
-        else if(soundMute == true)
-        {
-            muteButton.image.sprite = soundOn;
-        }
     }
+ 
 }

@@ -96,9 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b997fb6761a3e04badbeaa7ead89f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boostPower: 3
-  obstacleBouncePower: 2
-  joystick: {fileID: 4378080642034543933, guid: c51f8e7b9e7f5234da318f8f4a02dca5,
+  joystick: {fileID: 4378080642034543933, guid: 9cfbf3087939ffa488ddf8cd357d46c8,
     type: 3}
 --- !u!50 &8732769545361582847
 Rigidbody2D:
