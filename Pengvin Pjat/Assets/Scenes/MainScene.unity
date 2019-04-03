@@ -2386,78 +2386,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226369063}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40.01363, y: -4.65221, z: -0.469}
+  m_LocalPosition: {x: 42.037647, y: -5.211072, z: -0.93775}
   m_LocalScale: {x: 0.76199996, y: 0.76199996, z: 0.76199996}
   m_Children: []
-  m_Father: {fileID: 289196913}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1243070086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1243070084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac14178926c1a854d9bc54faab99f683, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacle: {fileID: 2708810156318443083, guid: c26397ef68a2361418e70411489fd0b9,
-    type: 3}
---- !u!1 &1243956052
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1243956053}
-  m_Layer: 0
-  m_Name: Enviroment
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1243956053
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1243956052}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0240185, y: 0.55886185, z: 0.46875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1979055610}
-  - {fileID: 454876948}
-  - {fileID: 863898173}
-  - {fileID: 487699396}
-  - {fileID: 161259060}
-  - {fileID: 662315252}
-  - {fileID: 403975669}
-  - {fileID: 869112190}
-  - {fileID: 726589345}
-  - {fileID: 659867715}
-  - {fileID: 2131290201}
-  - {fileID: 645759926}
-  - {fileID: 1316296660}
-  - {fileID: 1274402024}
-  - {fileID: 631333922}
-  - {fileID: 863118113}
-  - {fileID: 1844761802}
-  - {fileID: 1446230944}
-  - {fileID: 366508239}
-  - {fileID: 661390092}
-  - {fileID: 970918458}
-  - {fileID: 1997008862}
-  - {fileID: 1273436545}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 216371521}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1226369065
 MonoBehaviour:
