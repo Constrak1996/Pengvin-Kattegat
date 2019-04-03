@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 
     public static bool stunned;
 
+    private bool usedBoost;
+
     public float boostPower;
 
     public float obstacleBouncePower;
@@ -81,9 +83,11 @@ public class PlayerMovement : MonoBehaviour
                 currentLerpTime = lerpTime;
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && !usedBoost)
             {
                 GetComponent<Rigidbody2D>().AddForce(direction * boostPower, ForceMode2D.Impulse);
+                usedBoost = true;
+                StartCoroutine(BoostCooldown());
             }
         }
         if (stunned is true)
@@ -131,11 +135,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //private IEnumerator WaitForStunToEnd()
-    //{
-    //    yield return new WaitForSeconds(1);
-    //    stunned = false;
-
-    //}
+    private IEnumerator BoostCooldown()
+    {
+        yield return new WaitForSeconds(2);
+        usedBoost = false;
+    }
 
 }

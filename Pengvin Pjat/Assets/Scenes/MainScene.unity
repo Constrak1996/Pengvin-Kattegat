@@ -3707,6 +3707,11 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 1.0326796
       objectReference: {fileID: 0}
+    - target: {fileID: 6137709315141804391, guid: ff9175890785d9846a3af4f9e9ebd52d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff9175890785d9846a3af4f9e9ebd52d, type: 3}
 --- !u!1 &1692349758
