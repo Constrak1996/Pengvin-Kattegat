@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cc4cd72db2f30f42a8560911dbf88b2, type: 3}
+  m_Script: {fileID: 11500000, guid: f58154697425b184787ab7d16fe18088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!20 &519420031
@@ -1997,12 +1997,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 803412105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d335f2925b79f94dac7d3d6d3acc364, type: 3}
+  m_Script: {fileID: 11500000, guid: 36131d31193328a489496491a63aa286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedPrefab: {fileID: 6993368588047302735, guid: d0a5c043bfbe42e44b7e4947744f0538,
+  speedPrefab: {fileID: 6993368588047302735, guid: dfe603e1593fc8448b9d123ffdb6365e,
     type: 3}
-  respawnTime: 70
+  respawnTime: 45
 --- !u!114 &803412107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,12 +2012,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 803412105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96e7a2ecfb4d6fb46b4fb750ed0580c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6379a1290f764c747901f4a225d43397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPrefab: {fileID: 441990580454816587, guid: 84509eef524341142a9dbacecf98a9fd,
+  healthPrefab: {fileID: 441990580454816587, guid: d3423cb634db25a4087ebd2fe4d025ac,
     type: 3}
-  respawnTime: 90
+  respawnTime: 70
 --- !u!4 &803412108
 Transform:
   m_ObjectHideFlags: 0
@@ -2879,10 +2879,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1243070084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fd4a5ecb30e92c48bf900861c23f3fa, type: 3}
+  m_Script: {fileID: 11500000, guid: ac14178926c1a854d9bc54faab99f683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 2708810156318443083, guid: 43bc0c304d7bcfd419b02b2e1bacfc40,
+  obstacle: {fileID: 2708810156318443083, guid: c26397ef68a2361418e70411489fd0b9,
     type: 3}
 --- !u!1 &1243956052
 GameObject:
