@@ -169,7 +169,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9e3922853d0193343b0be865ab41bae2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a0238013ea22e8e438d2f0d83a2d3203, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -385,7 +385,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d707d3d1a5ddeb44bb491160eee69119, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ddb545f8208d5d546ba228bdcf7c1ae2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -530,7 +530,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 2e6d9f804496f93449ff431fd0be88ae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1682aa1f09920944a86d8efa7931cf60, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1093,7 +1093,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e69c5a1c4fdf13b48aaddb91cb4a519e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aaeb5e138c02b9244b86c01e298f0d3a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1123,8 +1123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asource: {fileID: 2141548076}
-  soundOn: {fileID: 21300000, guid: e69c5a1c4fdf13b48aaddb91cb4a519e, type: 3}
-  soundOff: {fileID: 21300000, guid: 5d8d946bb920ba8498b1a67827ba25d2, type: 3}
+  soundOn: {fileID: 21300000, guid: 72651cea3f8327a45a77710870428220, type: 3}
+  soundOff: {fileID: 21300000, guid: aaeb5e138c02b9244b86c01e298f0d3a, type: 3}
   muteButton: {fileID: 1726830708}
 --- !u!1 &1847382436
 GameObject:
@@ -1240,7 +1240,7 @@ GameObject:
   - component: {fileID: 2090937899}
   - component: {fileID: 2090937898}
   m_Layer: 0
-  m_Name: WaterFront 1
+  m_Name: Background image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1318,12 +1318,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: a602ac24f9baa7c4986cdc27cdd67adf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c2e36be3fb36914591d275a50f9c80a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 19.18, y: 9.46}
+  m_Size: {x: 19.21, y: 10.81}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
