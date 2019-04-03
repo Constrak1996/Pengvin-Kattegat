@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         direction = rb2d.velocity;
+        //direction.Normalize();
 
         if (stunned is false)
         {
@@ -80,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
             stunTime += Time.deltaTime;
             speed = 0;
 
-            
+            transform.Translate(-direction * Time.deltaTime * ObstacleBounce);
 
             if (stunTime > 1)
             {
@@ -92,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (slowed)
         {
-            speed = 3;
+            speed = 1;
         }
         else if (!slowed)
         {
@@ -110,12 +111,5 @@ public class PlayerMovement : MonoBehaviour
             rb2d.AddForce(movement.normalized * speed);
         }
     }
-
-    //private IEnumerator WaitForStunToEnd()
-    //{
-    //    yield return new WaitForSeconds(1);
-    //    stunned = false;
-
-    //}
 
 }
