@@ -39,16 +39,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-<<<<<<< HEAD
+
         direction = rb2d.velocity;
         //direction.Normalize();
 
-=======
+
         //Reset our movement vector
         movement = Vector2.zero;
 
-        
->>>>>>> master
+       
         if (stunned is false)
         {
             //Variables to store our direction in
@@ -85,20 +84,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 currentLerpTime = lerpTime;
             }
-<<<<<<< HEAD
-
-            float percent = currentLerpTime / lerpTime;
-            rotZ = Mathf.Lerp(rotZ, 0, percent);
-            transform.eulerAngles = new Vector3(0, 0, rotZ);
-
-            //transform.eulerAngles = new Vector3(0, 0, rotZ);
+           
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 GetComponent<Rigidbody2D>().AddForce(direction * boostPower, ForceMode2D.Impulse);
             }
-=======
->>>>>>> master
+
         }
         if (stunned is true)
         {
